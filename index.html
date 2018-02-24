@@ -8,8 +8,6 @@
   <div class="center">
     <div class="shadow">
 
-      <div id="time"></div>
-
       <div id="hours">🌳🍑</div>
       <div id="mins">🌳🍑</div>
       <div id="secs">🌳🍑</div>
@@ -18,7 +16,6 @@
         var clock = setInterval(function(){
             var joes = ["🍑", "🌳", "🌳", "🍑", "👾", "🐰", "🎠", "🎐", "🍰", "🚂"]
             var time = new Date().toLocaleTimeString('en-US', { hour12: false, hour: "numeric", minute: "numeric", second: "numeric"});
-            var test = document.getElementById("time");
             var hours = document.getElementById("hours");
             var mins = document.getElementById("mins");
             var secs = document.getElementById("secs");
