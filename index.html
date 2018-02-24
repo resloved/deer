@@ -15,8 +15,10 @@
             var halfs = ["🕛", "🕧", "🕐", "🕜", "🕑", "🕝", "🕞", "🕓", "🕟", "🕔", "🕠", "🕕", "🕡", "🕡", "🕖",
     "🕢", "🕗", "🕣", "🕘", "🕤", "🕙", "🕥", "🕚", "🕦"];
             var time = new Date().toLocaleTimeString('en-US', {hour12: false, hour: "numeric", minute: "numeric"});
+            var hour = Number(time.substring(0,2)) % 12;
+            var half = (Number(time.substring(3,5))) < 30 ? 0 : 1;
             var face = document.getElementById("face");
-            face.innerHTML = halfs[0]
+            face.innerHTML = halfs[2 * hour + half]; 
         }, 0.5);
       </script>
 
