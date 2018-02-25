@@ -14,14 +14,13 @@ var clock = setInterval(function(){
 
     var offset = 135; // 6AM at -45deg;
     var angle = 360*time.substring(0,2)/24-offset;
-    var angle = -15;
     orbit.style.MozTransform = "rotate("+angle+"deg)";
 
     var icon = document.getElementById("weather");
 
     // [Could have it only show on northern hemisphere]
     if (angle > -45 && angle < 135) {
-        icon.innerHTML = "🌞"; // Sun
+        icon.innerHTML = "🌞️"; // Sun
     } else {
         icon.innerHTML = "🌝"; // Moon
     }

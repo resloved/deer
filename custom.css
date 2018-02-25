@@ -1,5 +1,4 @@
-* {
-    color: #1B1D1E;
+body {
     font-size: 35px;
 }
 
@@ -8,7 +7,7 @@
     width: 200px;
     height: 200px;
     margin-left: -50px;
-    margin-top: -50px;
+    margin-top: -55px;
     top: 50%;
     left: 50%;
 }
@@ -17,10 +16,22 @@
     position: fixed;
     width: 150px;
     height: 150px;
-    margin-left: -85px;
+    margin-left: -88px;
     margin-top: -85px;
     top: 50%;
     left: 50%;
+}
+
+#orbitContainer {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    margin-left: -115px;
+    margin-top: -115px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 3px dashed #E4E4E4;
 }
 
 #weather {
