@@ -12,8 +12,10 @@ var clock = setInterval(function(){
 
     var orbit = document.getElementById("orbit");
 
-    var offset = 135; // 6AM at -45deg;
-    var angle = 360*time.substring(0,2)/24-offset;
+    var offset = -135; // 6AM at -45deg;
+    var total = Number(time.substring(0,2)) * 3600 + Number(time.substring(3,5)) * 60 + Number(time.substring(6,8));
+    var pct = total/86400;
+    var angle = 360*pct+offset;
 
     orbit.style.webkitTransform = "rotate("+angle+"deg)";
     orbit.style.MozTransform = "rotate("+angle+"deg)";
