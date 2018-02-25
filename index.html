@@ -5,24 +5,30 @@
 <title>Home</title>
 </head>
 <body>
+
   <div class="center">
     <div class="shadow">
 
-      <div id="hours">🌳🍑</div>
+      <div id="hour">🌳🍑</div>
       <div id="mins">🌳🍑</div>
       <div id="secs">🌳🍑</div>
 
       <script type="text/javascript">
         var clock = setInterval(function(){
-            var joes = ["🍑", "🌳", "🐘", "👻", "👾", "🐰", "🎠", "🍒", "🍰", "🚂"]
-            var time = new Date().toLocaleTimeString('en-US', { hour12: false, hour: "numeric", minute: "numeric", second: "numeric"});
-            var hours = document.getElementById("hours");
+
+            var joes = ["🍑", "🌳", "🐘", "👻", "🍯", "🐰", "🌀", "🍒", "🍰", "🚂"]
+
+            var time = new Date().toLocaleTimeString('en-US', {hour12: false, hour: "numeric", minute: "numeric", second: "numeric"});
+
+            var hour = document.getElementById("hour");
             var mins = document.getElementById("mins");
             var secs = document.getElementById("secs");
-            hours.innerHTML = joes[time.charAt(0)] + joes[time.charAt(1)];
+
+            hour.innerHTML = joes[time.charAt(0)] + joes[time.charAt(1)];
             mins.innerHTML = joes[time.charAt(3)] + joes[time.charAt(4)];
             secs.innerHTML = joes[time.charAt(6)] + joes[time.charAt(7)];
-        }, 0.1);
+
+        }, 1);
       </script>
 
     </div>
