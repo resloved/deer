@@ -12,18 +12,23 @@ var clock = setInterval(function(){
 
     var orbit = document.getElementById("orbit");
 
-    var angle = 360*time.substring(0,2)/24;
-    orbit.style.MozTransform = "rotate("+(angle - 45)+"deg)";
-
-    // var shadow = document.getElementById("shadow");
-    // shadow.style.textShadow = "5px -1px 0px rgba(0, 0, 0, 0.1)"
+    var offset = 135; // 6AM at -45deg;
+    var angle = 360*time.substring(0,2)/24-offset;
+    orbit.style.MozTransform = "rotate("+angle+"deg)";
 
     var icon = document.getElementById("weather");
 
-    if (angle > 180) {
-        icon.innerHTML = "🌝";
+    // [Could have it only show on northern hemisphere]
+    if (angle > 0 && angle < 180) {
+        icon.innerHTML = "🌞"; // Sun
     } else {
-        icon.innerHTML = "🌞";
+        icon.innerHTML = "🌝"; // Moon
     }
+
+    var dist = 8;
+    var shadow = document.getElementById("shadow");
+
+    angle = (angle+45) * Math.PI / 180;
+    shadow.style.textShadow = dist * Math.cos(angle) + "px " + dist * Math.sin(angle) + "px 0px rgba(0, 0, 0, 0.1)"
 
 }, 1);
