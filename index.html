@@ -6,32 +6,20 @@
 </head>
 <body>
 
+  <div id="orbit">
+    <div id="weather"></div>
+  </div>
+  
   <div class="center">
-    <div class="shadow">
+    <div id="shadow">
 
-      <div id="hour">🌳🍑</div>
-      <div id="mins">🌳🍑</div>
-      <div id="secs">🌳🍑</div>
-
-      <script type="text/javascript">
-        var clock = setInterval(function(){
-
-            var joes = ["🍑", "🌳", "🐘", "👻", "🍯", "🐰", "🌀", "🍒", "🍰", "🚂"]
-
-            var time = new Date().toLocaleTimeString('en-US', {hour12: false, hour: "numeric", minute: "numeric", second: "numeric"});
-
-            var hour = document.getElementById("hour");
-            var mins = document.getElementById("mins");
-            var secs = document.getElementById("secs");
-
-            hour.innerHTML = joes[time.charAt(0)] + joes[time.charAt(1)];
-            mins.innerHTML = joes[time.charAt(3)] + joes[time.charAt(4)];
-            secs.innerHTML = joes[time.charAt(6)] + joes[time.charAt(7)];
-
-        }, 1);
-      </script>
+      <div id="mins"></div>
+      <div id="secs"></div>
 
     </div>
   </div>
+
+  <script src="clock.js"></script>
+
 </body>
 </html>
