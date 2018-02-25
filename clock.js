@@ -14,7 +14,12 @@ var clock = setInterval(function(){
 
     var offset = 135; // 6AM at -45deg;
     var angle = 360*time.substring(0,2)/24-offset;
+
+    orbit.style.webkitTransform = "rotate("+angle+"deg)";
     orbit.style.MozTransform = "rotate("+angle+"deg)";
+    orbit.style.msTransform = "rotate("+angle+"deg)";
+    orbit.style.OTransform = "rotate("+angle+"deg)";
+    orbit.style.Transform = "rotate("+angle+"deg)";
 
     var icon = document.getElementById("weather");
 
