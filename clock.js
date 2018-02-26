@@ -25,7 +25,6 @@ var clock = setInterval(function(){
 
     var icon = document.getElementById("weather");
 
-    // [Could have it only show on northern hemisphere]
     if (angle > -45 && angle < 135) {
         icon.innerHTML = "🌞️"; // Sun
     } else {
