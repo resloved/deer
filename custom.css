@@ -8,6 +8,7 @@ body {
     height: 200px;
     margin-left: -50px;
     margin-top: -50px;
+    white-space: nowrap;
     top: 50%;
     left: 50%;
 }
@@ -16,10 +17,11 @@ body {
     position: fixed;
     width: 150px;
     height: 150px;
-    margin-left: -88px;
-    margin-top: -85px;
+    margin-left: -90px;
+    margin-top: -90px;
     top: 50%;
     left: 50%;
+    font-size:50px;
 }
 
 #orbitContainer {
@@ -31,11 +33,69 @@ body {
     top: 50%;
     left: 50%;
     border-radius: 50%;
-    border: 3px dashed #E4E4E4;
+    border: 3px dashed #E0E0E0;
+}
+
+#icon {
+    margin-left: -25px;
+    -webkit-transform: rotate(-45deg);
+    -webkit-transform-origin: 0% 0%;
+    -moz-transform: rotate(-45deg);
+    -moz-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    -ms-transform: rotate(-45deg);
+    -o-transform-origin: 0% 0%;
+    -o-transform: rotate(-45deg);
 }
 
 #weather {
-    margin-left: -25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -190px;
+    margin-left: -30px;
+    font-size: 42px;
+}
+
+#line {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -175px;
+    margin-left: -60px;
+    border-top: 3px dashed #E0E0E0;
+    width: 100px;
+}
+
+#lineEnd {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -177px;
+    background-color: #D4D4D4;
+    border-radius: 50%;
+    margin-left: -75px;
+    width: 8px;
+    height: 8px;
+}
+
+#lineArrow {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -174px;
+    border-right: 3px solid #E0E0E0;
+    border-bottom: 3px solid #E0E0E0;
+    margin-left: 43px;
+    width: 5px;
+    height: 5px;
+
+    -webkit-transform: rotate(-45deg);
+    -webkit-transform-origin: 0% 0%;
     -moz-transform: rotate(-45deg);
     -moz-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+    -ms-transform: rotate(-45deg);
+    -o-transform-origin: 0% 0%;
+    -o-transform: rotate(-45deg);
 }
