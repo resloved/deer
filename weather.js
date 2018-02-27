@@ -29,7 +29,7 @@ function getWeather(position) {
 
 function parseIcon(id) {
 
-    var icons = ["🌞", "⛅", "🌧", "🌩", "🌨"];
+    var icons = ["🌞", "🌤️", "🌧", "🌩", "🌨"];
     var dom = document.getElementById("weather");
 
     id = id.substring(0,2);
