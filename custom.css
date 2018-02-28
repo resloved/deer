@@ -17,11 +17,10 @@ body {
     position: fixed;
     width: 150px;
     height: 150px;
-    margin-left: -86px;
-    margin-top: -86px;
+    margin-left: -85px;
+    margin-top: -85px;
     top: 50%;
     left: 50%;
-    font-size:42px;
 }
 
 #orbitContainer {
@@ -38,14 +37,21 @@ body {
 
 #icon {
     margin-left: -25px;
+
     -webkit-transform: rotate(-45deg);
     -webkit-transform-origin: 0% 0%;
+
     -moz-transform: rotate(-45deg);
     -moz-transform-origin: 0% 0%;
-    -ms-transform-origin: 0% 0%;
+
     -ms-transform: rotate(-45deg);
-    -o-transform-origin: 0% 0%;
+    -ms-transform-origin: 0% 0%;
+
     -o-transform: rotate(-45deg);
+    -o-transform-origin: 0% 0%;
+
+    transform: rotate(-45deg);
+    transform-origin: 0% 0%;
 }
 
 #weather {
