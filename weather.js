@@ -1,5 +1,3 @@
-getLocation();
-
 function getLocation() {
 
     if(navigator.geolocation) {
@@ -13,7 +11,9 @@ function getWeather(position) {
     var key = "354638e949f50138500211c1ee9abdfc";
     var lon = position.coords.longitude;
     var lat = position.coords.latitude;
-    var url = "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&APPID="+key;
+    var url = "https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&APPID="+key;
+
+    var dom = document.getElementById("weather");
 
     var req = new XMLHttpRequest();
     var code = 0;
@@ -22,15 +22,16 @@ function getWeather(position) {
     req.send();
     req.onload = function() {
         var obj = JSON.parse(req.responseText);
-        parseIcon(obj.weather[0].icon);
+        for (var i = 0; i < 2; i++) {
+            parseIcon(obj.list[i].weather[0].icon, dom);
+        }
     }
 
 }
 
-function parseIcon(id) {
+function parseIcon(id, dom) {
 
     var icons = ["🌞", "🌤️", "🌧", "🌩", "🌨"];
-    var dom = document.getElementById("weather");
 
     id = id.substring(0,2);
 
@@ -39,20 +40,20 @@ function parseIcon(id) {
         case '03':
         case '04':
         case '50':
-            dom.innerHTML = icons[1];
+            dom.innerHTML += icons[1] + " ";
             break;
         case '09':
         case '10':
-            dom.innerHTML = icons[2];
+            dom.innerHTML += icons[2] + " ";
             break;
         case '11':
-            dom.innerHTML = icons[3];
+            dom.innerHTML += icons[3] + " ";
             break;
         case '13':
-            dom.innerHTML = icons[4];
+            dom.innerHTML += icons[4] + " ";
             break;
         default:
-            dom.innerHTML = icons[0];
+            dom.innerHTML += icons[0] + " ";
             break;
     }
 
