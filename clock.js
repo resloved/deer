@@ -59,7 +59,6 @@ function forecast(hours, mins, secs) {
     var bar = document.getElementById("weather");
     var total = (hours - 2) % 3 * 3600 + mins * 60 + secs;
     var pct = total / (3600 * 3);
-    console.log(pct);
     bar.style.marginLeft = 45 - 45 * pct;
 
 }

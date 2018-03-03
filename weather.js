@@ -23,7 +23,6 @@ function getWeather(position) {
     req.send();
     req.onload = function() {
         var obj = JSON.parse(req.responseText);
-        console.log(obj);
         for (var i = 0; i < obj.list.length; i++) {
             parseIcon(obj.list[i].weather[0].icon, dom);
         }
