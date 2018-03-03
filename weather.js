@@ -13,6 +13,7 @@ function getWeather(position) {
     var lat = position.coords.latitude;
     var url = "https://api.openweathermap.org/data/2.5/forecast?lat="+lat+"&lon="+lon+"&APPID="+key;
 
+    var forecast = document.getElementById("forecast");
     var dom = document.getElementById("weather");
 
     var req = new XMLHttpRequest();
@@ -22,10 +23,13 @@ function getWeather(position) {
     req.send();
     req.onload = function() {
         var obj = JSON.parse(req.responseText);
-        for (var i = 0; i < 2; i++) {
+        console.log(obj);
+        for (var i = 0; i < obj.list.length; i++) {
             parseIcon(obj.list[i].weather[0].icon, dom);
         }
     }
+
+    forecast.style.display = "inline";
 
 }
 
