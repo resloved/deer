@@ -34,12 +34,15 @@ body {
     border-radius: 50%;
     border: 3px dashed #E0E0E0;
 }
+=======
+>>>>>>> f0d092631e91ddad5b19699415090a803288ad6a
 
 #icon {
     margin-left: -25px;
 
     -webkit-transform: rotate(-45deg);
     -webkit-transform-origin: 0% 0%;
+<<<<<<< HEAD
     -moz-transform: rotate(-45deg);
     -moz-transform-origin: 0% 0%;
     transform: rotate(-45deg);
