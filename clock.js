@@ -8,8 +8,8 @@ function clock(){
     var mins  = Number(time.substring(3,5));
     var secs  = Number(time.substring(6,8));
     
-    orbit(hours, mins, secs);
-    forecast(hours, mins, secs);
+    orbit(hours, mins);
+    forecast(hours, mins);
 
 }
 
@@ -25,12 +25,12 @@ function inner(time) {
 
 }
 
-function orbit(hours, mins, secs) {
+function orbit(hours, mins) {
 
-    var total = 3600*hours + 60*secs + mins;
+    var total = 3600*hours + 60*mins;
 
     var offset = 135; // 6AM at -45deg;
-    var angle = Math.round(360*total/86400-offset);
+    var angle = 360*total/86400-offset;
 
     var orbiter = document.getElementById("orbit");
 
@@ -54,10 +54,10 @@ function orbit(hours, mins, secs) {
 
 }
 
-function forecast(hours, mins, secs) {
+function forecast(hours, mins) {
 
     var bar = document.getElementById("weather");
-    var total = (hours - 2) % 3 * 3600 + mins * 60 + secs;
+    var total = (hours - 2) % 3 * 3600 + mins*60;
     var pct = total / (3600 * 3);
     bar.style.marginLeft = 45 - 45 * pct;
 
