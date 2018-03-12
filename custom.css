@@ -4,9 +4,10 @@ body {
 
 .center {
     position: absolute;
+    overflow: hidden;
     width: 200px;
     height: 200px;
-    margin-left: -50px;
+    margin-left: -35px;
     margin-top: -56px;
     white-space: nowrap;
     top: 50%;
@@ -17,7 +18,7 @@ body {
     position: fixed;
     width: 150px;
     height: 150px;
-    margin-left: -89px;
+    margin-left: -74px;
     margin-top: -86px;
     top: 50%;
     left: 50%;
@@ -27,7 +28,7 @@ body {
     position: fixed;
     width: 200px;
     height: 200px;
-    margin-left: -115px;
+    margin-left: -100px;
     margin-top: -115px;
     top: 50%;
     left: 50%;
@@ -52,8 +53,8 @@ body {
     width: 125px;
     white-space: nowrap;
     overflow: hidden;
-    margin-top: -195px;
     margin-left: -75px;
+    margin-top: -195px;
     top: 50%;
     left: 50%;
 }
@@ -74,8 +75,8 @@ body {
 #line {
     position: fixed;
     width: 100px;
+    margin-left: -48px;
     margin-top: -175px;
-    margin-left: -63px;
     top: 50%;
     left: 50%;
     border-top: 3px dashed #E0E0E0;
@@ -85,7 +86,7 @@ body {
     position: fixed;
     width: 5px;
     height: 5px;
-    margin-left: -18px;
+    margin-left: -3px;
     margin-top: -140px;
     top: 50%;
     left: 50%;
