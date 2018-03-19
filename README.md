@@ -1,1 +1,1 @@
-![Preview](https://raw.githubusercontent.com/resloved/emoji-clock/PREVIEW.png)
+![Preview](PREVIEW.png)
